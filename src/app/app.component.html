@@ -1,3 +1,25 @@
-<a routerLink="new-comp-url">Click to route</a>
+<!--<a routerLink="new-comp-url">Click to route</a>-->
 
-<router-outlet> </router-outlet>
+<!--<router-outlet> </router-outlet>-->
+
+<div class="container">
+
+<!--  sidebar-->
+  <div class="sidebar">
+    <h3 class="">Menu</h3>
+    <a [routerLink]="['/new-comp-url']" >Link 1</a>
+    <a [routerLink]="['/new-comp-url']" >Link 2</a>
+    <a [routerLink]="['/new-comp-url']" >Link 3</a>
+  </div>
+
+  <!-- Page Content -->
+  <div class="content">
+    <h1>Routed Components</h1>
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+
+
+
+
