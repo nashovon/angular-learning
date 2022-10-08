@@ -1,0 +1,24 @@
+.container{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  width: 20%;
+}
+
+.sidebar a{
+  padding: 10px;
+}
+
+.sidebar a:hover{
+  background: whitesmoke;
+}
+
+.content{
+  margin-left: 50px;
+}

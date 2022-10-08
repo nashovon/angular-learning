@@ -14,7 +14,8 @@ export class NewCompComponent implements OnInit {
 
   // lifecycle hooks
   ngOnInit(): void {
-    this.buttonClickedEvent('Method called from ngOnInit')
+    this.title = 'This value is set from component class'
+    // this.buttonClickedEvent('Method called from ngOnInit')
   }
 
 

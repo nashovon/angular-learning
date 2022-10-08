@@ -1,16 +1,27 @@
-
 <!--Interpolation-->
-<div>{{title}}</div>
+<!--<div>{{title}}</div>-->
 
 <br>
 
 <!--Value of property binding-->
-<input type="text" [value]="title">
+<!--<input type="text" [value]="title">-->
 
 
 <br>
 
 <!--Event Binding-->
-<button (click)="buttonClickedEvent('Method called from HTML')">
-  Click to change value
-</button>
+<!--<button (click)="buttonClickedEvent('Method called from HTML')">-->
+<!--  Click to change value-->
+<!--</button>-->
+
+
+<!--directives-->
+
+<input type="text" [(ngModel)]="title" >
+
+
+<br>
+<br>
+<br>
+
+<h5>{{title}}</h5>

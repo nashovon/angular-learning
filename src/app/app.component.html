@@ -1,3 +1,29 @@
-<a routerLink="new-comp-url">Click to route</a>
+<!--<a routerLink="new-comp-url">Click to route</a>-->
 
-<router-outlet> </router-outlet>
+<!--<router-outlet> </router-outlet>-->
+
+
+<div class="container">
+
+
+  <div class="sidebar">
+
+    <h5 >Menu</h5>
+
+    <a [routerLink]="'home'" [queryParams]="{user:'Jhon',password:'123'}">Home</a>
+
+
+    <a (click)="shouldRoute(true)">Dashboard</a>
+
+  </div>
+
+
+  <div class="content">
+
+    <h5>Routed Components</h5>
+
+    <router-outlet></router-outlet>
+
+  </div>
+
+</div>
