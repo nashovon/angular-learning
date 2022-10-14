@@ -1,0 +1,20 @@
+<h1>Books From API</h1>
+
+
+<table style="padding: 20px">
+  <thead>
+  <th>Book No</th>
+  <th>Step Start</th>
+  <th>Step End</th>
+  <th>Average</th>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let book of bookList;let bookIndex= index">
+    <td>Book No : {{bookIndex+1}}</td>
+    <td>{{book.step_start}}</td>
+    <td>{{book.step_end}}</td>
+    <td>{{book.val_avg}}</td>
+  </tr>
+  </tbody>
+</table>

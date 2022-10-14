@@ -4,6 +4,7 @@ import {NewCompComponent} from "./new-comp/new-comp.component";
 import {HomeComponent} from "./home/home.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {BookListComponent} from "./book-list/book-list.component";
 
 const routes: Routes = [
   {path: 'new-comp-url' , component:NewCompComponent},
@@ -19,6 +20,8 @@ const routes: Routes = [
   {path: '' , redirectTo:'/home' , pathMatch:'full'},
 
   {path: 'dashboard' , component:DashboardComponent,title:'Graphs'},
+
+  {path: 'books' , component:BookListComponent,title:'Books'},
 
   // wildcard
   {path: '**' , component:PageNotFoundComponent},

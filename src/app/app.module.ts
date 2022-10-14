@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {FormsModule} from "@angular/forms";
+import {BookService} from "./book.service";
+import { BookListComponent } from './book-list/book-list.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,10 +18,12 @@ import {FormsModule} from "@angular/forms";
     NewCompComponent,
     HomeComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BookListComponent
   ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         AppRoutingModule,
         FormsModule
     ],
