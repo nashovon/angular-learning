@@ -11,6 +11,7 @@ import {FormsModule} from "@angular/forms";
 import {BookService} from "./book.service";
 import { BookListComponent } from './book-list/book-list.component';
 import {HttpClientModule} from "@angular/common/http";
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {HttpClientModule} from "@angular/common/http";
     HomeComponent,
     DashboardComponent,
     PageNotFoundComponent,
-    BookListComponent
+    BookListComponent,
+    DirectivesComponent
   ],
     imports: [
         BrowserModule,

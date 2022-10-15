@@ -1,0 +1,72 @@
+<!--&lt;!&ndash;Directives&ndash;&gt;-->
+
+<!--&lt;!&ndash;1. Component&ndash;&gt;-->
+<!--&lt;!&ndash;2. Attribute&ndash;&gt;-->
+
+<!--&lt;!&ndash;3. Structural&ndash;&gt;-->
+
+<!--&lt;!&ndash;NG CLASS&ndash;&gt;-->
+<!--<h1 [ngClass]="'center large'">NgClass</h1>-->
+<!--<h1 [ngClass]="['center' ,'large']">NgClass</h1>-->
+<!--<h1 [ngClass]="{'large' : isLarge(),center:isCenter()}">NgClass</h1>-->
+
+<!--&lt;!&ndash;property binding&ndash;&gt;-->
+<!--<h1 class="classname" [class.classname]="isLarge()" id="title" [id]="'title'">NgClass</h1>-->
+<!--<h1 style="background-color: red" [style.background-color]="isLarge()">NgClass</h1>-->
+
+
+<!--&lt;!&ndash;NG MODEL&ndash;&gt;-->
+<!--&lt;!&ndash;TWO way data binding&ndash;&gt;-->
+<!--&lt;!&ndash;<input [value]="myInput" (change)="myInput=$event" type="text">&ndash;&gt;-->
+
+<!--<input [(ngModel)]="myInput" (ngModelChange)="whatAreYouTyping($event)" type="text">-->
+
+<!--<div>current value : {{myInput}}</div>-->
+
+<!--&lt;!&ndash;NG IF&ndash;&gt;-->
+
+<!--<hr>-->
+<!--<hr>-->
+<!--<hr>-->
+<!--<hr>-->
+
+<!--<div *ngIf="shouldShow();else alternativeText">-->
+<!--  This element is visible now!!-->
+<!--</div>-->
+
+<!--<ng-template #alternativeText>-->
+<!--  Div Hidden!!-->
+<!--</ng-template>-->
+
+<button (click)="showDiv=!showDiv">Toggle div</button>
+
+
+<!--NG FOR-->
+
+<!--<div *ngFor="let people of dataList;let ind = index">-->
+<!--  <div>{{ind+5}}</div>-->
+<!--  <div>{{people.id}}</div>-->
+<!--  <div>{{people.name}}</div>-->
+<!--  <hr>-->
+<!--</div>-->
+
+
+<!--NG SWITCH-->
+
+<div [ngSwitch]="switchValue">
+  <div *ngSwitchCase="'primary'">primary value</div>
+  <div *ngSwitchCase="'secondary'">secondary value</div>
+  <div *ngSwitchDefault>Other value</div>
+  <div></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
