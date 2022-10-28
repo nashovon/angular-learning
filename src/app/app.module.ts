@@ -12,6 +12,8 @@ import {BookService} from "./book.service";
 import { BookListComponent } from './book-list/book-list.component';
 import {HttpClientModule} from "@angular/common/http";
 import { DirectivesComponent } from './directives/directives.component';
+import { ParentComponent } from './@communication/parent/parent.component';
+import { ChildComponent } from './@communication/child/child.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { DirectivesComponent } from './directives/directives.component';
     DashboardComponent,
     PageNotFoundComponent,
     BookListComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    ParentComponent,
+    ChildComponent
   ],
     imports: [
         BrowserModule,

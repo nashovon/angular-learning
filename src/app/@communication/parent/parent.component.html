@@ -1,0 +1,31 @@
+
+
+<child-of-parent [textToView]="'Value set from parent'" (clicked)="showCaughtSignal($event)">
+
+  <h1 class="topContent">
+    Top Text
+  </h1>
+
+
+  <h2 class="bottomContent">
+    Bottom Text
+  </h2>
+
+
+</child-of-parent>
+
+
+<br>
+<br>
+<br>
+
+<button (click)="invokeChildMethod()">
+  Get value - Parent component
+</button>
+
+<br>
+<br>
+<br>
+<br>
+
+<div>Time {{currentTime | date}}</div>

@@ -6,6 +6,7 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {BookListComponent} from "./book-list/book-list.component";
 import {DirectivesComponent} from "./directives/directives.component";
+import {ParentComponent} from "./@communication/parent/parent.component";
 
 const routes: Routes = [
   {path: 'new-comp-url' , component:NewCompComponent},
@@ -25,6 +26,8 @@ const routes: Routes = [
   {path: 'books' , component:BookListComponent,title:'Books'},
 
   {path: 'directives' , component:DirectivesComponent,title:'Directives'},
+
+  {path: 'parent' , component:ParentComponent,title:'Parent'},
 
   // wildcard
   {path: '**' , component:PageNotFoundComponent},

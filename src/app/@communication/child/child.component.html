@@ -1,0 +1,17 @@
+
+<ng-content select="h1"></ng-content>
+
+<br>
+<br>
+<br>
+
+<div>
+  {{textToView}}
+</div>
+
+<button (click)="sendClickEvent()">
+  Click to emit event - Child Component
+</button>
+
+
+<ng-content select="h2"></ng-content>
