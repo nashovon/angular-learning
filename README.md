@@ -895,72 +895,6 @@ attributes, hence the name.
 </div>
 ```
 
-# Auth Guards
-
-AuthGuard is used to protect the routes from unauthorized access in angular.
-
-How AuthGuard Works?
-
-Auth guard provides a lifecycle event called canActivate. The canActivate is like a constructor. It will be called
-before accessing the routes. The canActivate has to return true to access the page. If it returns false, we can not
-access the page. We can write our user authorization and authentication logic inside the canActivate function.
-
-5 types of guards are there
-
-- canActivate: Implements a canActivate function that checks whether the current user has permission to activate the
-  requested route.
-- canDeactivateChild: The canActivatechild guard is very similar to canActivateGuard. We apply this guard to the parent
-  route. The angular
-- invokes this guard whenever the user tris to navigate to any of its child routes.
-- canDeactive: canDeactive is an interface that is implemented by a class to create a guard which decides if a route can
-  be deactivated.
-- canLoad:Canload is a route guards to decide if a module can be loaded configured with a loadChild.
-- Resolve: Resolve guards is used in the scenario where before navigating to any route we want to ensure whether there
-  is data available or not before navigating to any route.
-
-##
-
-# how to implement it?
-
-`ng g guard auth
-`
-
-```
-var isAuthenticated = this.authService.getAuthStatus();
-
-if (!isAuthenticated) {
-
-this.router.navigate(['/login']);
-
-}
-
-return isAuthenticated;
-```
-
-In routing.module.ts
-
-```
-{ path: 'create', component: PostCreateComponent, canActivate: [AuthGuard]},
-
-{ path: 'edit', component: PostCreateComponent, canActivate: [AuthGuard] },
-
-```
-
-Make sure to import AuthGuard in this routing file and also add it inside @NgModule providers.
-
-```
-@NgModule({
-
-imports: [RouterModule.forRoot(routes)],
-
-exports: [RouterModule],
-
-providers: [AuthGuard]
-
-})
-
-```
-
 # Interceptors
 
 Interceptors allow us to intercept incoming or outgoing HTTP requests using the HttpClient . They can handle both
@@ -995,27 +929,27 @@ In interceptor class
 
 ```
 
-intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  
+    return next.handle(this.addAuthToken(request));
+  
+  }
 
-return next.handle(this.addAuthToken(request));
-
-}
-
-addAuthToken (request: HttpRequest<any>) {
-
-const token = this.authService.getAuthToken();
-
-return request.clone({
-
-setHeaders: {
-
-Authorization: `Basic ${token}`
-
-}
-
-})
-
-}
+  addAuthToken (request: HttpRequest<any>) {
+  
+    const token = this.authService.getAuthToken();
+    
+    return request.clone({
+    
+    setHeaders: {
+    
+    Authorization: `Basic ${token}`
+    
+    }
+    
+    })
+  
+  }
 
 ```
 
