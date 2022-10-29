@@ -856,41 +856,41 @@ attributes, hence the name.
 <div class="container mt-5">
 
 
-<table class="table table-striped">
+  <table class="table table-striped">
 
-<thead>
+    <thead>
 
-<tr>
+      <tr>
 
-<th>Id</th>
+        <th>Id</th>
+        
+        <th>Name</th>
+        
+        <th>Username</th>
+        
+        <th>Email</th>
 
-<th>Name</th>
+      </tr>
 
-<th>Username</th>
+    </thead>
 
-<th>Email</th>
+    <tbody>
 
-</tr>
+      <tr *ngFor="let user of Users">
+      
+        <td>{{ user.id }}</td>
+        
+        <td>{{ user.name }}</td>
+        
+        <td>{{ user.username }}</td>
+        
+        <td>{{ user.email }}</td>
+      
+      </tr>
 
-</thead>
+    </tbody>
 
-<tbody>
-
-<tr *ngFor="let user of Users">
-
-<td>{{ user.id }}</td>
-
-<td>{{ user.name }}</td>
-
-<td>{{ user.username }}</td>
-
-<td>{{ user.email }}</td>
-
-</tr>
-
-</tbody>
-
-</table>
+  </table>
 
 </div>
 ```
