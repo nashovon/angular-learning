@@ -26,5 +26,9 @@ export class BookService {
     return this.httpClient.delete('delete url')
   }
 
+  isAdmin(){
+
+  }
+
   // logic
 }

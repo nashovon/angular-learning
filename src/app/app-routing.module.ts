@@ -7,6 +7,8 @@ import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {BookListComponent} from "./book-list/book-list.component";
 import {DirectivesComponent} from "./directives/directives.component";
 import {ParentComponent} from "./@communication/parent/parent.component";
+import {AdminComponent} from "./admin/admin.component";
+import {AuthGuard} from "./guards/auth.guard";
 
 const routes: Routes = [
   {path: 'new-comp-url' , component:NewCompComponent},
@@ -29,6 +31,13 @@ const routes: Routes = [
 
   {path: 'parent' , component:ParentComponent,title:'Parent'},
 
+  {
+    path: 'admin',
+    component:AdminComponent,
+    title:'Admin',
+    canActivate:[AuthGuard]
+  },
+
   // wildcard
   {path: '**' , component:PageNotFoundComponent},
 ];
@@ -38,3 +47,13 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
+// canActivate
+
+
+// canActivateChild
+// canDeactivate
+// canDeactivateChild
+// canLoad
